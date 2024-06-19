@@ -13,8 +13,8 @@ MIDDLEWARE ->
     middleware is something which is executed between the request and the response.
     when we write app.use() we are basically using a middleware.
     a middleware is something which is executed between the request and the response
-    from the server, for example when a user requst for the /instagram route fromt he server 
-    then we have to check if the user is logged in and then redirect to the instagram and gie the
+    from the server, for example when a user request for the /instagram route from the server 
+    then we have to check if the user is logged in and then redirect to the instagram and give the
     respond, this checking is basically a middleware.
 
 */

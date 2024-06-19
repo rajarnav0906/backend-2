@@ -10,7 +10,7 @@ import { app } from "./app.js";
 connectDB()
     .then( () => {
         app.on("error", () => {
-            console.log("server failed to connect");
+            console.log("server failed to connect to database");
             throw error;
         })
         app.listen(process.env.PORT || 8000, ()  => {
