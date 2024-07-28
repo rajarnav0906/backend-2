@@ -44,6 +44,16 @@ app.use(express.static("public"))
 //cookieParser is used by the server to store some or a little data in the client side computer for some need
 app.use(cookieParser())
 
+
+
+
+//import router 
+import userRouter from "./routes/user.routes.js"
+
+//routes declartion
+app.use("/api/v1/users", userRouter)
+
+
 export { app }
 
 
