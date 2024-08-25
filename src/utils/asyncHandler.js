@@ -1,14 +1,19 @@
+//asyncHandler is a wrapper function 
+
+
+
 //using .then().catch()
 
-    const asyncHandler = (requestHandler) => {
-        return (err, req, res, next) => {
-            Promise
-                .resolve((requestHandler(err, req, res, next)))
-                .catch((error) => next(error))
-        }
-    }
+const asyncHandler = (requestHandler) => {
+    return (req, res, next) => {
+        Promise
+            .resolve(requestHandler(req, res, next))
+            .catch((error) => next(error));
+    };
+};
 
-    export { asyncHandler }
+export { asyncHandler };
+
 
 
 
